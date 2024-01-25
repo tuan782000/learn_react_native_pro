@@ -38,7 +38,7 @@ Trong react native chỉ có View và Text, không có div section,... như HTML
 
 style inline react native:
 
-```tsx
+```jsx
 import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
 
@@ -101,6 +101,55 @@ Lý do không dùng expo, khó can thiệp xâu vào trong cấu hình android c
 
 asserts: [] trong react-native.config.js nơi cấu hình đường link tới assets tới fonts
 
+Sử dụng font
+
+Thay vì dùng fontWeight như ví dụ trên giờ ta đã có font nên ta chuyển sang fontfamily
+
+```jsx
+import {View, Text, StyleSheet, Button} from 'react-native';
+import React from 'react';
+
+const App = () => {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Todo list</Text>
+      <Button title="Click me" onPress={() => {}} />
+    </View>
+  );
+};
+
+export default App;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'coral',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  title: {
+    fontFamily: 'Poppins-Bold',
+    fontSize: 32,
+    color: '#fff',
+  },
+});
+
+```
+
+Sử dụng biến môi trường cấu hình font
+
+Tạo thư mục src - tạo thư mục constants - tạo file fontFamilies.ts
+
+```js
+export const fontFamilies = {
+  regular: 'Poppins-Regular',
+  medium: 'Poppins-Medium',
+  semiBold: 'Poppins-SemiBold',
+  bold: 'Poppins-Bold',
+};
+
+```
 
 
 
