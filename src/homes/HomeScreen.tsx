@@ -9,6 +9,10 @@ import TitleComponent from '../components/TitleComponent';
 import {Text, View} from 'react-native';
 import {globalStyles} from '../styles/globalStyles';
 import CardComponent from '../components/CardComponent';
+import {Element4, Notification, SearchNormal1} from 'iconsax-react-native';
+import {colors} from '../constants/colors';
+import TagComponent from '../components/TagComponent';
+import SpaceComoponent from '../components/SpaceComoponent';
 
 const HomeScreen = () => {
   return (
@@ -17,8 +21,8 @@ const HomeScreen = () => {
         <RowComponent justify="space-between">
           {/* <Text style={[globalStyles.text]} />
           <Text style={[globalStyles.text]} /> */}
-          <TextComponent text="data" />
-          <TextComponent text="data" />
+          <Element4 size={24} color={colors.desc} />
+          <Notification size={24} color={colors.desc} />
         </RowComponent>
       </SectionComponent>
       <SectionComponent>
@@ -34,20 +38,24 @@ const HomeScreen = () => {
         <RowComponent
           styles={[globalStyles.inputContainer]}
           onPress={() => console.log('Say, Hi')}>
-          <TextComponent text="Search" />
+          <TextComponent text="Search Task" color="#69686f" />
+          <SearchNormal1 size={20} color={colors.desc} />
           <Text>Icon Search</Text>
         </RowComponent>
       </SectionComponent>
       <SectionComponent>
         <CardComponent>
           <RowComponent>
-            <View style={{ flex: 1 }}>
+            <View style={{flex: 1}}>
               <TitleComponent text="Task progress" />
-              <TextComponent text="30/40 tasks done"/>
-              <TextComponent text="Tag" />
+              <TextComponent text="30/40 tasks done" />
+              <SpaceComoponent />
+              <RowComponent justify="flex-start">
+                <TagComponent text="March 22" onPress={() => console.log('đang nhấn')} />
+              </RowComponent>
             </View>
             <View>
-            <TextComponent text="CircleChart" />
+              <TextComponent text="CircleChart" />
             </View>
           </RowComponent>
         </CardComponent>

@@ -591,3 +591,10 @@ export default RowComponent;
 Đoạn code có ý nghĩa Nếu à nó là onPress thì return về TouchableOpacity ngược lại không phải return về View Bình thường
 
 ## Cài đặt thêm Icon và xử lý Progress Bar
+
+iconsax
+
+
+crtl + shift + p "Nhập" Organize imports
+
+Để bỏ qua hết các import nào không sử dụng
