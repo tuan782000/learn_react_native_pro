@@ -1,6 +1,5 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
 import Container from '../components/Container';
 import RowComponent from '../components/RowComponent';
 import SectionComponent from '../components/SectionComponent';
@@ -13,6 +12,8 @@ import {Element4, Notification, SearchNormal1} from 'iconsax-react-native';
 import {colors} from '../constants/colors';
 import TagComponent from '../components/TagComponent';
 import SpaceComoponent from '../components/SpaceComoponent';
+import CiculaComponent from '../components/CiculaComponent';
+import React = require('react');
 
 const HomeScreen = () => {
   return (
@@ -51,14 +52,29 @@ const HomeScreen = () => {
               <TextComponent text="30/40 tasks done" />
               <SpaceComoponent />
               <RowComponent justify="flex-start">
-                <TagComponent text="March 22" onPress={() => console.log('đang nhấn')} />
+                <TagComponent
+                  text="March 22"
+                  onPress={() => console.log('đang nhấn')}
+                />
               </RowComponent>
             </View>
             <View>
-              <TextComponent text="CircleChart" />
+              <CiculaComponent value={80} color={''} />
             </View>
           </RowComponent>
         </CardComponent>
+      </SectionComponent>
+      <SectionComponent>
+        <RowComponent>
+          <View style={{flex: 1, backgroundColor: colors.blue}}>
+            <TagComponent text="col-1" />
+          </View>
+          <SpaceComoponent width={16} /> 
+          {/* Lý do tạo SpaceComponent để cho cách đều giữa 2 cái view, dùng margin đôi khi ko chính xác */}
+          <View style={{flex: 1, backgroundColor: 'coral'}}>
+            <TextComponent text="data" />
+          </View>
+        </RowComponent>
       </SectionComponent>
     </Container>
   );

@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import {Platform, StyleSheet} from 'react-native';
 import {colors} from '../constants/colors';
-import { fontFamilies } from '../constants/fontFamilies';
+import {fontFamilies} from '../constants/fontFamilies';
 
 export const globalStyles = StyleSheet.create({
   container: {
@@ -34,5 +34,5 @@ export const globalStyles = StyleSheet.create({
     paddingVertical: Platform.OS === 'ios' ? 6 : 4,
     borderRadius: 100,
     backgroundColor: colors.blue,
-  }
+  },
 });

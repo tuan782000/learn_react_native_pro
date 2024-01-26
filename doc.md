@@ -598,3 +598,13 @@ iconsax
 crtl + shift + p "Nhập" Organize imports
 
 Để bỏ qua hết các import nào không sử dụng
+
+## Thêm chart
+
+Thêm chart có chuyển động: Dùng thư viện 
+
+npm i react-native-circular-progress-indicator
+
+and 
+
+npm i react-native-reanimated
